@@ -1,0 +1,150 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    color:rgb(255, 246, 246);
+}
+
+.navbar {
+    padding: 0px 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    box-shadow: inset 0 0px 10px -8px black;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+
+.navbar h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-left: 50px;
+    color:black;
+}
+
+.prenom {
+    margin-left: 30px;
+}
+
+.nom {
+    margin-left: 80px;
+    margin-top: -15px;
+}
+
+.prenom, .nom {
+    transition: transform 0.3s ease-in-out
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-right: 60px;
+}
+
+.navbar li {
+    position: relative;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color :black;
+}
+
+.navbar li::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 0;
+    height: 2px;
+    right: 0;
+    margin-top : 3px;
+    background-color: black;
+    transition: width 0.3s ease-in;
+    -webkit-transition: width 0.3s ease-in;
+}
+
+.navbar li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 100%;
+    margin: 10% auto;
+    gap: 50px;
+
+}
+
+.bio-pp {
+    height: 350px;
+    width: 350px;
+    overflow: hidden;
+}
+
+.container .bio-pp img {
+    width: 100%;
+    transition: transform 1s ease-in-out;
+    transform-origin: 50% 50%;
+}
+
+.bio-pp img:hover {
+    width: 100%;
+    transform: scale(1.2);
+}
+
+.container .bio {
+    width: 500px;
+    height: 50%;
+    border: 2px solid black;
+    padding: 45px;
+    transition: border 0.3s ease-in-out;
+}
+
+.container .bio:hover {
+    border: 5px solid black;
+}
+
+.container .bio p {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+span {
+    font-weight: bold;
+    position: relative;
+}
+
+span::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 0;
+    height: 2px;
+    right: 0;
+    margin-top : 3px;
+    background-color: black;
+    transition: width 0.3s ease-in;
+    -webkit-transition: width 0.3s ease-in;
+}
+
+span:hover::after {
+    width: 100%;
+    left: 0;
+}
+
