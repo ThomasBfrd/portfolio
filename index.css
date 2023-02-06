@@ -111,13 +111,22 @@ body {
 .container .bio {
     width: 500px;
     height: 50%;
-    border: 2px solid black;
     padding: 45px;
     transition: border 0.3s ease-in-out;
+
+  --clr: black;
+  --outline: 2px solid black;
+  color: var(--clr);
+  outline: var(--outline);
+  border: var(--outline);
+  outline-offset: -2px;
+  transition: outline-width 200ms ease, outline-offset 200ms ease;
 }
 
-.container .bio:hover {
-    border: 5px solid black;
+.container .bio:hover, .container .bio:focus {
+    outline: var(--outline);
+  outline-width: 8px;
+  outline-offset: -8px;
 }
 
 .container .bio p {
