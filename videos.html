@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes vidéos</title>
+    <link rel="stylesheet" href="styles/videos.css">
+</head>
+<body>
+    <navbar class="navbar">
+        <a href="index.html">
+            <h1 class="textHover">
+            <div class="prenom"></div>
+            <div class="nom"></div>
+            </h1>
+        </a>
+        <ul>
+            <a href="videos.html"><li>VIDEOS</li></a>
+            <a href="musiques.html"><li>MUSIQUES</li></a>
+            <a href="coding.html"><li>CODING</li></a>
+            <a href="contact.html"><li>CONTACT</li></a>
+        </ul>
+        </navbar>
+        <div class="allContent">
+        <section class="container hidden">
+            <!-- <h1>Vidéos</h1> -->
+            <h2>En tant qu'ancien <span class="keyword">monteur vidéo</span> et <span class="keyword">motion designer</span>, j'ai pu travailler en agence de communication et publicité ces 5 dernières années.
+                J'ai eu la chance de monter sur différents types de vidéos, des interviews, émissions, publicité TV, vidéos institutionnelles... Voici quelques exemples :
+            </h2>
+            <div class="video-container">
+                <div class="video">
+                    <video src="/src/videos/video1.mp4" muted poster="/src/video2.webp" controlsList="nodownload"></video>
+                </div>
+                <div class="video">
+                        <video src="/src/videos/video2.mp4" muted poster="/src/video1.webp" controlsList="nodownload"></video>
+                    </div>
+                <div class="video">
+                    <video src="/src/videos/video3.mp4" muted poster="/src/video6.webp" controlsList="nodownload"></video>
+                </div>
+                <div class="video">
+                    <video src="/src/videos/video4.mp4" muted poster="/src/video9.webp" controlsList="nodownload"></video>
+                </div>
+                <div class="video">
+                    <video src="/src/videos/video5.mp4" muted poster="/src/video5.webp" controlsList="nodownload"></video>
+                </div>
+                <div class="video">
+                    <video src="/src/videos/video6.mp4" muted poster="/src/video3.png" controlsList="nodownload"></video>
+                </div>
+                <div class="video">
+                    <video src="/src/videos/video7.mp4" muted poster="/src/video4.webp" controlsList="nodownload"></video>
+                </div>
+                <div class="video">
+                    <video src="/src/videos/video8.mp4" muted poster="/src/video8.webp" controlsList="nodownload"></video>
+                </div>
+            </div>
+            <div class="popup-video">
+                <span>&times;</span>
+                <video src="/src/videos/video1.mp4" controls height="405px" width="720px" controlsList="nodownload"></video>
+            </div>
+    </section>
+
+    <section class="containerVertical hidden">
+        <div class="video-containerVertical">
+            <div class="videoVertical">
+                <video src="/src/videos/videoVertical1.mp4" muted poster="/src/videoVertical1.jpg" controlsList="nodownload"></video>
+            </div>
+            <div class="videoVertical">
+                    <video src="/src/videos/videoVertical2.mp4" muted poster="/src/videoVertical2.webp" controlsList="nodownload"></video>
+                </div>
+            <div class="videoVertical">
+                <video src="/src/videos/videoVertical3.mp4" muted poster="/src/videoVertical3.webp" controlsList="nodownload"></video>
+            </div>
+            <div class="videoVertical">
+                <video src="/src/videos/videoVertical4.mp4" muted poster="/src/videoVertical4.webp" controlsList="nodownload"></video>
+            </div>
+            <div class="videoVertical">
+                <video src="/src/videos/videoVertical5.mp4" muted poster="/src/videoVertical7.webp" controlsList="nodownload"></video>
+            </div>
+        </div>
+        <div class="popup-videoVertical">
+            <span>&times;</span>
+            <video src="/src/videos/videoVertical1.mp4" controls height="405px" width="720px" controlsList="nodownload"></video>
+        </div>
+</section>
+    </div>
+<footer>
+    <p>Copyright © 2023</p> 
+  </footer>
+<script src="index.js"></script>
+<script src="videos.js"></script>
+</body>
+</html>
