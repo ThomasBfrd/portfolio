@@ -421,28 +421,37 @@ footer p {
 
 
 @media (max-width: 1200px) {
+    .navbar {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
     .navbar h1 {
-        font-size: 1.4rem;
-        line-height: 2.0rem;
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        margin-left: 0px;
         margin-top: 0px;
     }
 
     .nom {
-        margin-left: 80px;
+        margin-left: 75px;
     }
 
     .navbar ul {
-        gap: 40px;
+        gap: 15px;
+        margin-left: 60px;
+        margin-top: 15px;
     }
 
     .navbar li {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-left: 10px;
     }
 
     .allContent {
@@ -516,7 +525,7 @@ footer p {
         font-size: 1.2rem;
         line-height: 1.9rem;
         margin-left: 0px;
-        margin-top: 0px;
+        margin-top: 10px;
     }
 
     .nom {
@@ -526,6 +535,7 @@ footer p {
     .navbar ul {
         gap: 15px;
         margin-left: 60px;
+        margin-top: 15px;
     }
 
     .navbar li {
@@ -533,9 +543,8 @@ footer p {
     }
 
     footer {
-        display: flex;
-        align-items: center;
         justify-content: center;
+        text-align: center;
     }
 
     
@@ -544,7 +553,7 @@ footer p {
     }
 
     .container {
-        margin-top: -10px;
+        margin-top: 15px;
     }
     
     .container h2 {

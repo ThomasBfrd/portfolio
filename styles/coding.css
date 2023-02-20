@@ -191,6 +191,7 @@ footer p {
     .navbar ul {
         gap: 15px;
         margin-left: 60px;
+        margin-top: 15px;
     }
 
     .navbar li {
@@ -201,6 +202,7 @@ footer p {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-left: 10px;
     }
 }
 
@@ -214,16 +216,21 @@ footer p {
         font-size: 1.2rem;
         line-height: 1.9rem;
         margin-left: 0px;
-        margin-top: 0px;
+        margin-top: 10px;
     }
 
     .nom {
         margin-left: 75px;
     }
 
+    .prenom {
+        margin-right: 65px;
+    }
+
     .navbar ul {
         gap: 15px;
         margin-left: 60px;
+        margin-top: 15px;
     }
 
     .navbar li {
@@ -231,9 +238,8 @@ footer p {
     }
 
     footer {
-        display: flex;
-        align-items: center;
         justify-content: center;
+        text-align: center;
     }
 
     body {
