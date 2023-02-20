@@ -542,6 +542,19 @@ footer p {
         font-size: 0.8rem;
     }
 
+    .keyword::after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 0;
+        height: 1.5px;
+        right: 0;
+        margin-top : -5px;
+        background-color: var(--outlineClr);
+        transition: width 0.3s ease-in;
+        -webkit-transition: width 0.3s ease-in;
+    }
+
     footer {
         justify-content: center;
         text-align: center;
@@ -559,8 +572,8 @@ footer p {
     .container h2 {
         padding: 30px;
         margin-top: -50px;
-        font-size: 0.8rem;
-        width: 85%;
+        font-size: 0.7rem;
+        width: 90%;
     }
     
     .container .video-container .video {
