@@ -145,15 +145,15 @@ footer p {
     text-align: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1920px) {
     .navbar h1 {
-        font-size: 0.9rem;
-        line-height: 1.8rem;
+        font-size: 1.4rem;
+        line-height: 2.0rem;
         margin-top: 0px;
     }
 
     .nom {
-        margin-left: 50px;
+        margin-left: 80px;
     }
 
     .navbar ul {
@@ -161,7 +161,7 @@ footer p {
     }
 
     .navbar li {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 
     footer {
@@ -171,20 +171,21 @@ footer p {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1200px) {
     .navbar {
         justify-content: space-around;
+        flex-wrap: wrap;
     }
 
     .navbar h1 {
-        font-size: 0.7rem;
-        line-height: 1.6rem;
-        margin-left: 25px;
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        margin-left: 0px;
         margin-top: 0px;
     }
 
     .nom {
-        margin-left: 45px;
+        margin-left: 75px;
     }
 
     .navbar ul {
@@ -193,12 +194,49 @@ footer p {
     }
 
     .navbar li {
-        font-size: 0.5rem;
+        font-size: 0.8rem;
     }
 
     footer {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media (max-width: 720px) {
+    .navbar {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .navbar h1 {
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .nom {
+        margin-left: 75px;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        margin-left: 60px;
+    }
+
+    .navbar li {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body {
+        text-align: center;
     }
 }

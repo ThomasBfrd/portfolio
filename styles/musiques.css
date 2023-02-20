@@ -106,23 +106,8 @@ body::-webkit-scrollbar {
     flex-wrap: wrap;
     gap: 40px;
     padding: 50px 0;
-    height: calc(100vh - 80px - 80px);
-    width: 100%;
+    height: calc(100% - 80px - 80px);
 }
-
-/* .allContent h1 {
-    border: var(--outline);
-    outline: var(--outline);
-    padding: 15px;
-    outline-offset: -2px;
-    transition : outline-width 0.2s ease-in-out, outline-offset 0.2s ease-in-out;
-}
-
-.allContent h1:hover, .allContent h1:focus {
-    outline: var(--outline);
-    outline-width: 6px;
-    outline-offset: -6px;
-} */
 
 .allContent .player {
     width: 80%;
@@ -131,13 +116,13 @@ body::-webkit-scrollbar {
 
 .allContent .player iframe {
     width: 100%;
-    height: 100%;
+    height: 400px;
 }
 
 .allContent .description {
     width: 70%;
     text-align:center;
-    overflow:visible;
+    overflow-wrap: break-word;
 }
 
 span {
@@ -182,15 +167,15 @@ footer p {
     text-align: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1920px) {
     .navbar h1 {
-        font-size: 0.9rem;
-        line-height: 1.8rem;
+        font-size: 1.4rem;
+        line-height: 2.0rem;
         margin-top: 0px;
     }
 
     .nom {
-        margin-left: 50px;
+        margin-left: 80px;
     }
 
     .navbar ul {
@@ -198,7 +183,7 @@ footer p {
     }
 
     .navbar li {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 
     footer {
@@ -208,20 +193,47 @@ footer p {
     }
 }
 
-@media (max-width: 400px) {
-    .navbar {
-        justify-content: space-around;
-    }
-
+@media (max-width: 1200px) {
     .navbar h1 {
-        font-size: 0.7rem;
-        line-height: 1.6rem;
-        margin-left: 25px;
+        font-size: 1.4rem;
+        line-height: 2.0rem;
         margin-top: 0px;
     }
 
     .nom {
-        margin-left: 45px;
+        margin-left: 80px;
+    }
+
+    .navbar ul {
+        gap: 40px;
+    }
+
+    .navbar li {
+        font-size: 1rem;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 720px) {
+    .navbar {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .navbar h1 {
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .nom {
+        margin-left: 75px;
     }
 
     .navbar ul {
@@ -230,14 +242,13 @@ footer p {
     }
 
     .navbar li {
-        font-size: 0.5rem;
+        font-size: 0.8rem;
     }
 
     footer {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 90px;
     }
 
     body {
@@ -260,11 +271,11 @@ footer p {
         height: 100%;
         width: 80%;
         margin-top: 80px;
-        margin-bottom: 80px;
+        margin-bottom: 120px;
     }
 
     .allContent .player iframe {
         width: 100%;
-        height: 100%;
+        height: 90%;
     }
 }

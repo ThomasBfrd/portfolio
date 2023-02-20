@@ -218,9 +218,9 @@ body::-webkit-scrollbar {
 
 .container .popup-video span {
     position: absolute;
-    top: 5px;
-    right: 20px;
-    font-size: 50px;
+    top: 260px;
+    right: 350px;
+    font-size: 60px;
     font-weight: bolder;
     z-index: 100;
     cursor: pointer;
@@ -338,18 +338,15 @@ footer p {
     text-align: center;
 }
 
-
-
-
-@media (max-width: 1200px) {
+@media (max-width: 1920px) {
     .navbar h1 {
-        font-size: 0.9rem;
-        line-height: 1.8rem;
+        font-size: 1.4rem;
+        line-height: 2.0rem;
         margin-top: 0px;
     }
 
     .nom {
-        margin-left: 50px;
+        margin-left: 80px;
     }
 
     .navbar ul {
@@ -357,7 +354,89 @@ footer p {
     }
 
     .navbar li {
-        font-size: 0.7rem;
+        font-size: 1rem;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .allContent {
+        height: calc(100% - 80px - 80px);
+    }
+
+    .container {
+        margin-top: -20px;
+    }
+    
+    .container h2 {
+        padding: 30px;
+        width: 85%;
+        margin-top: -40px;
+    }
+    
+    .container .video-container .video {
+        height: 250px;
+        width: 300px;
+    }
+
+    .container .popup-video {
+        width: 100%;
+        height: 100vh;
+        margin-top: 140px;
+    }
+
+    .container .popup-video video {
+        width: 50%;
+        height: 70%;
+    }
+
+    .container .popup-video span {
+        top: 0px;
+        right: 30px;
+    }
+
+    .containerVertical .video-containerVertical {
+        padding-bottom: 20px;
+    }
+    
+    .containerVertical .video-containerVertical .videoVertical {
+        height: 380px;
+        width: 220px;
+    }
+
+    .containerVertical .popup-videoVertical {
+        height: 300px;
+        width:  100%;
+        margin-top: 50px;
+    }
+
+    .containerVertical .popup-videoVertical video {
+        height: 90%;
+        width: 20%;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .navbar h1 {
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+        margin-top: 0px;
+    }
+
+    .nom {
+        margin-left: 80px;
+    }
+
+    .navbar ul {
+        gap: 40px;
+    }
+
+    .navbar li {
+        font-size: 1rem;
     }
 
     footer {
@@ -392,12 +471,18 @@ footer p {
     }
 
     .container .popup-video video {
-        width: 100%;
-        height: 70%;
+        width: 80%;
+        height: 80%;
+    }
+
+    .container .popup-video span {
+        top: 0px;
+        right: 30px;
     }
 
     .containerVertical .video-containerVertical {
-        margin-top: 30px;
+        margin-top: 50px;
+        padding-bottom: 20px;
     }
     
     .containerVertical .video-containerVertical .videoVertical {
@@ -406,14 +491,14 @@ footer p {
     }
 
     .containerVertical .popup-videoVertical {
-        height: 350px;
+        height: 300px;
         width:  100%;
         margin-top: 50px;
     }
 
     .containerVertical .popup-videoVertical video {
-        height: 100%;
-        width: 25%;
+        height: 90%;
+        width: 20%;
     }
 }
 
@@ -421,20 +506,21 @@ footer p {
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 720px) {
     .navbar {
         justify-content: space-around;
+        flex-wrap: wrap;
     }
 
     .navbar h1 {
-        font-size: 0.7rem;
-        line-height: 1.6rem;
-        margin-left: 25px;
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        margin-left: 0px;
         margin-top: 0px;
     }
 
     .nom {
-        margin-left: 45px;
+        margin-left: 75px;
     }
 
     .navbar ul {
@@ -443,7 +529,7 @@ footer p {
     }
 
     .navbar li {
-        font-size: 0.5rem;
+        font-size: 0.8rem;
     }
 
     footer {
@@ -482,6 +568,12 @@ footer p {
     .container .popup-video video {
         width: 90%;
         height: 50%;
+    }
+
+    .container .popup-video span {
+        top: 10px;
+        right: 20px;
+        font-size: 2.5rem;
     }
 
     .containerVertical .video-containerVertical {
