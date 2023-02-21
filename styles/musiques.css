@@ -18,7 +18,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
     color:rgb(255, 246, 246);
     background: var(--bkg);
-    height: calc(100% - 80px - 80px);
+    height: 100vh;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -167,7 +167,7 @@ footer p {
     text-align: center;
 }
 
-@media (max-width: 1920px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
     .navbar h1 {
         font-size: 1.4rem;
         line-height: 2.0rem;
@@ -183,7 +183,7 @@ footer p {
     }
 
     .navbar li {
-        font-size: 1rem;
+        font-size:1rem;
     }
 
     footer {
@@ -193,7 +193,7 @@ footer p {
     }
 }
 
-@media (max-width: 1200px) {
+@media (min-width : 780px) and (max-width: 1039px) {
     .navbar {
         justify-content: space-around;
         flex-wrap: wrap;
@@ -226,9 +226,15 @@ footer p {
         justify-content: center;
         margin-left: 10px;
     }
+
+    body {
+        height: 100%;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
 
-@media (max-width: 720px) {
+@media (min-width : 490px) and (max-width: 779px) {
     .navbar {
         justify-content: space-around;
         flex-wrap: wrap;
@@ -238,7 +244,7 @@ footer p {
         font-size: 1.2rem;
         line-height: 1.9rem;
         margin-left: 0px;
-        margin-top: 10px;
+        margin-top: 0px;
     }
 
     .nom {
@@ -246,23 +252,20 @@ footer p {
     }
 
     .navbar ul {
-        gap: 15px;
+        gap: 25px;
         margin-left: 60px;
         margin-top: 15px;
     }
 
     .navbar li {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     footer {
+        display: flex;
+        align-items: center;
         justify-content: center;
-        text-align: center;
-    }
-
-    body {
-        height: calc(100% - 80px - 80px);
-        margin-bottom: 30px;
+        margin-left: 10px;
     }
 
     .allContent {
@@ -287,4 +290,46 @@ footer p {
         width: 100%;
         height: 90%;
     }
+}
+
+@media (max-width : 489px){
+    .navbar {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .navbar h1 {
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .nom {
+        margin-left: 75px;
+    }
+
+    .navbar ul {
+        gap: 25px;
+        margin-left: 60px;
+        margin-top: 15px;
+    }
+
+    .navbar li {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+    }
+
+    body {
+        height: 100%;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
 }
