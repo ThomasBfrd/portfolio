@@ -22,7 +22,7 @@ new Typewriter(txtAnim, {
   deleteSpeed: 10
 })
 .changeDelay(30)
-.typeString('Thomas Bouffard')
+.typeString('<strong>Thomas Bouffard</strong>')
 .pauseFor(2000)
 .deleteChars(15)
 .pauseFor(1000)

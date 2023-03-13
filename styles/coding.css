@@ -105,12 +105,12 @@ body::-webkit-scrollbar {
     align-items: center;
 }
 
-span {
+.keyword {
     font-weight: bold;
     position: relative;
 }
 
-span::after {
+.keyword::after, .bento::after {
     position: absolute;
     display: block;
     content: '';
@@ -123,7 +123,7 @@ span::after {
     -webkit-transition: width 0.3s ease-in;
 }
 
-span:hover::after {
+.keyword:hover::after, a:hover .bento::after {
     width: 100%;
     left: 0;
 }
@@ -131,18 +131,30 @@ span:hover::after {
 footer {
     display: flex;
     align-items: center;
-    justify-content: end;
-    /* background-color: var(--bkg);
-    box-shadow: inset 0 0px 15px -8px black; */
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    /* background-color: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px); */
     bottom: 0;
     height: 80px;
     width: 100%;
 }
 
-footer p {
-    margin-right: 30px;
+footer p, footer a {
+    margin: 0 30px;
+    color: white;
     font-weight: normal;
-    text-align: center;
+}
+
+footer a, footer .bento {
+    text-decoration: none;
+    position: relative;
+}
+
+.bento {
+    color: greenyellow;
+    font-weight: bold;
 }
 
 @media (min-width: 1024px) and (max-width: 1440px) {
