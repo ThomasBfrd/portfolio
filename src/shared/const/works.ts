@@ -3,7 +3,7 @@ import type { Activity } from "../interfaces/activity.interface";
 export const WORKS: Activity[] = [
         {
         title: "Portfolio - Vue 3 + TypeScript",
-        image: "/public/portfolio-logo.jpg",
+        image: "/portfolio-logo.jpg",
         screen: "",
         company: "Portfolio",
         period: "Janv 2026 - Janv 2026",
@@ -21,8 +21,8 @@ export const WORKS: Activity[] = [
     },
     {
         title: "Viberz - React/.NET",
-        image: "/public/viberz-logo.png",
-        screen: "/public/viberz-screen.png",
+        image: "/viberz-logo.png",
+        screen: "/viberz-screen.png",
         company: "Viberz",
         period: "Août 2025 - Janv 2026",
         tools: [
