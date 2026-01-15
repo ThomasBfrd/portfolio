@@ -62,7 +62,7 @@ const sidebarOpen = ref(false);
             </svg>
           </div>
         </aside>
-        <div class="min-h-screen p-8 border-b border-zinc-800">
+        <div class="min-h-screen max-w-screen w-full p-8 border-b border-zinc-800">
           <main class="flex flex-col">
             <RouterView v-slot="{ Component }">
               <Transition mode="out-in" enter-active-class="transition-all duration-300"
