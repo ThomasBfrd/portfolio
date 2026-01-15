@@ -2,7 +2,6 @@
 import Activity from '@/shared/components/activity.vue';
 import { PROFILE } from '@/shared/const/profile';
 import { RECENT_ACTIVITIES } from '@/shared/const/recent-activities';
-import { SOCIALS } from '@/shared/const/socials';
 </script>
 
 <template>
@@ -28,24 +27,9 @@ import { SOCIALS } from '@/shared/const/socials';
       </ul>
     </section>
   
-    <section class="p-4 border-b border-zinc-800">
+    <section class="p-4">
       <h2 class="text-2xl font-bold mb-6">Expériences récentes</h2>
       <Activity :activities="RECENT_ACTIVITIES" />
-    </section>
-  
-    <section class="p-8 flex flex-col gap-4">
-      <h2 class="text-2xl font-bold mb-4">Contact</h2>
-      <div class="flex justify-between items-center mb-4">
-        <p>thomas.bfrd@gmail.com</p>
-        <ul class="flex gap-8 self-end">
-          <li v-for="social in SOCIALS" :key="social.platform">
-            <a :href="social.url" target="_blank" class="inline-block">
-              <component :is="social.icon"
-                class="h-12 w-12 fill-zinc-300 hover:fill-white transition-all duration-300 hover:scale-110" />
-            </a>
-          </li>
-        </ul>
-      </div>
     </section>
   </div>
 </template>

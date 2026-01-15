@@ -21,7 +21,7 @@ export const MENU_ITEMS: MenuItem[] = [
         route: "/projects"
     },
     {
-        label: "Contact",
+        label: "A propos",
         icon: AboutIcon,
         route: "/about"
     }
