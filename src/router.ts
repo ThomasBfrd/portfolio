@@ -3,7 +3,7 @@ import { createMemoryHistory, createRouter } from 'vue-router'
 import Home from "./views/Home.vue";
 import Experiences from "./views/Experiences.vue";
 import Projects from "./views/Projects.vue";
-import About from "./views/About.vue";
+import About from "./views/Contact.vue";
 
 const routes = [
     { path: "/", component: Home },
