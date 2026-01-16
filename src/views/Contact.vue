@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import About from '@/shared/components/about.vue';
 </script>
 
 <template>
     <div>
-        <section class="p-8 flex flex-col gap-4">
+        <section class="flex flex-col gap-4 text-foreground">
             <h2 class="text-2xl font-bold mb-4">A propos</h2>
             <div class="flex flex-col justify-start items-start gap-4 mb-4">
                 <p>Je suis Thomas Bouffard, développeur web fullstack.</p>
@@ -25,9 +24,6 @@ import About from '@/shared/components/about.vue';
                     pratique régulière du développement applicatif.</p>
                 <p>En dehors du développement, je suis passionné par la musique électronique et le sound-design, et je compose de la musique à mes heures perdues.</p>
             </div>
-        </section>
-        <section class="p-8 flex flex-col gap-4">
-            <About :is-centered="false" />
         </section>
     </div>
 </template>

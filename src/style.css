@@ -12,7 +12,13 @@ html::-webkit-scrollbar {
   display: none;
 }
 
+main::-webkit-scrollbar {
+  display: none;
+}
 
+main {
+  scrollbar-width: none;
+}
 
 /* Plugins */
 @plugin '@tailwindcss/forms';

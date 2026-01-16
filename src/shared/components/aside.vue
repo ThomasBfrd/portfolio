@@ -2,46 +2,66 @@
 import { MENU_ITEMS } from '../const/menu-items';
 import About from './about.vue';
 import ProfilePicture from './profile-picture.vue';
+import ArrowRight from "../../assets/svg/arrow-right.svg?component";
 
 defineProps<{
+    path: string;
     sidebarOpen: boolean;
     setSidebarOpen: (open: boolean) => void;
     setRouterPath: (path: string) => void;
+    setDarkMode: () => void;
 }>();
 </script>
 
 <template>
-    <aside class="bg-zinc-900 border-r border-zinc-800 p-6 flex flex-col items-center justify-start h-screen md:sticky gap-4
+    <aside class="border-r border-border bg-background p-6 flex flex-col items-center justify-start h-screen md:sticky gap-4
             sm:flex-col sm:min-h-screen sm:relative sm:h-screen sm:translate-x-0" :class="{
                 'fixed z-20 top-0 left-0 h-screen w-[280px] transform transition-transform duration-300': true,
                 '-translate-x-full': !sidebarOpen,
                 'translate-x-0': sidebarOpen
             }">
-        <button class="self-end sm:hidden mt-6 mb-4 p-2 border border-zinc-600 rounded cursor-pointer"
+        <button class="self-end sm:hidden mt-6 mb-4 p-2 border border-border rounded cursor-pointer"
             @click="setSidebarOpen(false)">
             ✕
         </button>
 
-        <section class="flex flex-col items-center gap-2 mt-4 border-b border-zinc-800 pb-4 w-full">
+        <section class="flex flex-col items-center gap-2 mt-4 border-b border-border pb-4 w-full">
             <ProfilePicture />
-            <span class="text-zinc-100 text-center font-light">@thomasbfrd</span>
+            <span class="text-foreground text-center font-light">@thomasbfrd</span>
         </section>
 
-        <h1 class="text-2xl font-bold text-zinc-100">Menu</h1>
+        <h1 class="text-2xl font-bold text-foreground">Menu</h1>
 
         <div class="w-full">
             <ul class="flex flex-col gap-4 mt-6">
                 <li v-for="item in MENU_ITEMS" :key="item.label">
-                    <RouterLink :to="item.route" @click="setSidebarOpen(!sidebarOpen)"
-                        class="cursor-pointer flex justify-between px-4 items-center p-2 hover:text-white border border-zinc-700 rounded-[8px] hover:bg-zinc-800 transition-all duration-200 group">
+                    <RouterLink :to="item.route" @click="setSidebarOpen(false); setRouterPath(item.route)"
+                        class="cursor-pointer flex justify-between px-4 items-center p-2 hover:text-secondary-foreground border border-border rounded-[8px] hover:bg-secondary transition-all duration-200 group">
                         <component :is="item.icon"
-                            class="h-5 w-5 fill-zinc-300 group-hover:fill-white group-hover:-rotate-15 transition-all duration-200" />
+                            class="h-5 w-5 fill-primary group-hover:fill-primary group-hover:-rotate-15 transition-all duration-200" />
                         <span>{{ item.label }}</span>
-                        <ArrowRight class="h-5 w-5 fill-zinc-300 group-hover:fill-white transition-all duration-200" />
+                        <ArrowRight class="h-5 w-5"
+                            :class="path === item.route ? 'fill-primary group-hover:fill-primary transition-all duration-200' : 'opacity-0'" />
                     </RouterLink>
                 </li>
             </ul>
         </div>
-        <About :is-centered="true" class="mt-auto justifyself-end"/>
+        <div class="mt-auto justify-self-end w-full flex flex-col items-center">
+            <h2 class="text-2xl font-bold mb-4">Contact</h2>
+            <About :is-centered="true" class="" />
+        </div>
+        <div>
+            <button @click="setDarkMode()"
+                class="h-12 w-12 rounded-lg p-2 cursor-pointer bg-background hover:bg-background transition-all duration-200">
+                <svg class="fill-black-700 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <svg class="fill-yellow-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                        fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
     </aside>
 </template>

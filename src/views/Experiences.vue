@@ -5,7 +5,7 @@ import { EXPERIENCES } from '@/shared/const/experiences';
 
 <template>
     <div>
-        <h2 class="text-2xl font-bold mb-6">EXPERIENCES</h2>
+        <h2 class="text-2xl font-bold mb-6 text-foreground">EXPERIENCES</h2>
         <Activity :activities="EXPERIENCES" />
     </div>
 </template>
