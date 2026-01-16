@@ -6,7 +6,7 @@ import { RECENT_ACTIVITIES } from '@/shared/const/recent-activities';
 
 <template>
   <div>
-    <section class="p-4">
+    <section>
       <h1 class="text-4xl font-bold text-zinc-100 hidden md:block">{{ PROFILE.name }}</h1>
       <p class="text-md text-zinc-400 italic hidden md:block">{{ PROFILE.email }}</p>
       <p class="md:mt-4 max-w-3xl text-zinc-300 leading-relaxed">

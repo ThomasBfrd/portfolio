@@ -32,7 +32,7 @@ defineProps<{
         <div class="w-full">
             <ul class="flex flex-col gap-4 mt-6">
                 <li v-for="item in MENU_ITEMS" :key="item.label">
-                    <RouterLink :to="item.route" @click="setSidebarOpen(!sidebarOpen)"
+                    <RouterLink :to="item.route" @click="setSidebarOpen(false); setRouterPath(item.route)"
                         class="cursor-pointer flex justify-between px-4 items-center p-2 hover:text-white border border-zinc-700 rounded-[8px] hover:bg-zinc-800 transition-all duration-200 group">
                         <component :is="item.icon"
                             class="h-5 w-5 fill-zinc-300 group-hover:fill-white group-hover:-rotate-15 transition-all duration-200" />
@@ -42,6 +42,9 @@ defineProps<{
                 </li>
             </ul>
         </div>
-        <About :is-centered="true" class="mt-auto justifyself-end"/>
+        <div class="mt-auto justify-self-end w-full flex flex-col items-center">
+        <h2 class="text-2xl font-bold mb-4">Contact</h2>
+        <About :is-centered="true" class=""/>
+        </div>
     </aside>
 </template>
