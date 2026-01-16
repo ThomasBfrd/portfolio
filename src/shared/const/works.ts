@@ -20,7 +20,7 @@ export const WORKS: Activity[] = [
         ]
     },
     {
-        title: "Viberz - React/.NET",
+        title: "Viberz - React / .NET",
         image: "/viberz-logo.png",
         screen: "/viberz-screen.png",
         company: "Viberz",

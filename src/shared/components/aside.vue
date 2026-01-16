@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { MENU_ITEMS } from '../const/menu-items';
 import About from './about.vue';
+import ProfilePicture from './profile-picture.vue';
 
 defineProps<{
     sidebarOpen: boolean;
@@ -10,9 +11,9 @@ defineProps<{
 </script>
 
 <template>
-    <aside class="bg-zinc-900 border-r border-zinc-800 p-6 flex flex-col items-center justify-start h-full gap-6
-            sm:flex-col sm:min-h-screen sm:relative sm:h-auto sm:translate-x-0" :class="{
-                'fixed z-20 top-0 left-0 h-full w-[280px] transform transition-transform duration-300': true,
+    <aside class="bg-zinc-900 border-r border-zinc-800 p-6 flex flex-col items-center justify-start h-screen md:sticky gap-4
+            sm:flex-col sm:min-h-screen sm:relative sm:h-screen sm:translate-x-0" :class="{
+                'fixed z-20 top-0 left-0 h-screen w-[280px] transform transition-transform duration-300': true,
                 '-translate-x-full': !sidebarOpen,
                 'translate-x-0': sidebarOpen
             }">
@@ -21,12 +22,12 @@ defineProps<{
             ✕
         </button>
 
-        <div
-            class="rounded-full h-[120px] w-[120px] mx-auto mb-4 overflow-hidden border-3 border-zinc-300 flex-shrink-0">
-            <img class="object-cover h-full w-full" src="/profile.jpg" alt="profile-picture">
-        </div>
+        <section class="flex flex-col items-center gap-2 mt-4 border-b border-zinc-800 pb-4 w-full">
+            <ProfilePicture />
+            <span class="text-zinc-100 text-center font-light">@thomasbfrd</span>
+        </section>
 
-        <p class="text-zinc-300 text-center">@thomasbfrd</p>
+        <h1 class="text-2xl font-bold text-zinc-100">Menu</h1>
 
         <div class="w-full">
             <ul class="flex flex-col gap-4 mt-6">
@@ -41,6 +42,6 @@ defineProps<{
                 </li>
             </ul>
         </div>
-        <About :isCentered="true" class="mt-auto justifyself-end"/>
+        <About :is-centered="true" class="mt-auto justifyself-end"/>
     </aside>
 </template>
