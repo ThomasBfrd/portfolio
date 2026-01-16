@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-    <div>
+    <div class="w-full p-4">
         <h2 class="text-2xl font-bold mb-4">Contact</h2>
         <div class="flex flex-col justify-start items-center gap-4 mb-4"
             :class="isCentered ? 'items-center' : 'items-start'">
