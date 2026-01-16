@@ -16,7 +16,7 @@ defineProps<{
                 <li v-for="social in SOCIALS" :key="social.platform">
                     <a :href="social.url" target="_blank" class="inline-block">
                         <component :is="social.icon"
-                            class="h-12 w-12 fill-zinc-300 hover:fill-white transition-all duration-300 hover:scale-110" />
+                            class="h-12 w-12 fill-foreground hover:fill-foreground transition-all duration-300 hover:scale-110" />
                     </a>
                 </li>
             </ul>

@@ -5,7 +5,7 @@ import { WORKS } from '@/shared/const/works';
 
 <template>
     <div>
-        <h2 class="text-2xl font-bold mb-6">PROJETS</h2>
+        <h2 class="text-2xl font-bold mb-6 text-foreground">PROJETS</h2>
         <Activity :activities="WORKS" />
     </div>
 </template>

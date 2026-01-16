@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import About from '@/shared/components/about.vue';
 </script>
 
 <template>
     <div>
-        <section class="flex flex-col gap-4">
+        <section class="flex flex-col gap-4 text-foreground">
             <h2 class="text-2xl font-bold mb-4">A propos</h2>
             <div class="flex flex-col justify-start items-start gap-4 mb-4">
                 <p>Je suis Thomas Bouffard, développeur web fullstack.</p>
