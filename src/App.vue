@@ -40,17 +40,17 @@ onUnmounted(() => {
 <template>
   <div class="bg-background transition-colors duration-300">
     <div class="max-w-[1440px] flex flex-col mx-auto text-foreground">
-      <div class="sm:hidden flex justify-between items-center border-b border-zinc-800">
+      <div class="sm:hidden flex justify-between items-center border-b border-border">
         <div class="flex items-center gap-4 ml-6 p-6">
           <div class="h-[60px] w-[60px]">
             <ProfilePicture class="w-full h-full" />
           </div>
           <div class="flex flex-col items-start">
-            <h1 class="text-3xl font-bold text-foreground">{{ PROFILE.name }}</h1>
-            <p class="text-md text-foreground italic">{{ PROFILE.email }}</p>
+            <h1 class="text-1xl font-bold text-foreground">{{ PROFILE.name }}</h1>
+            <p class="text-xs text-foreground italic">{{ PROFILE.email }}</p>
           </div>
         </div>
-        <button @click="sidebarOpen = !sidebarOpen" class="p-2 mr-6 border border-zinc-600 rounded cursor-pointer">
+        <button @click="sidebarOpen = !sidebarOpen" class="p-2 mr-6 border border-border rounded cursor-pointer">
           ☰
         </button>
       </div>
@@ -58,7 +58,7 @@ onUnmounted(() => {
       <RouterLink :to="path"></RouterLink>
       <div class="grid sm:grid-cols-[280px_1fr]">
         <Aside :sidebar-open="sidebarOpen" :set-sidebar-open="setSidebarOpened" :set-router-path="setRouterPath" :path="path" :set-dark-mode="toggleDark" />
-        <div class="min-h-screen max-w-screen w-full p-4 border-b border-zinc-800">
+        <div class="min-h-screen max-w-screen w-full p-4 border-b border-border">
           <main class="flex flex-col" :class="sidebarOpen && 'overflow-hidden h-screen'">
             <div v-if="sidebarOpen" class="md:hidden bg-zinc-950/80 h-screen fixed inset-0 z-10 backdrop-blur-[3px]" @click="setSidebarOpened(!sidebarOpen)"></div>
             <RouterView v-slot="{ Component }">
