@@ -8,8 +8,7 @@ defineProps<{
 </script>
 
 <template>
-    <div class="w-full p-4">
-        <h2 class="text-2xl font-bold mb-4">Contact</h2>
+    <div class="w-full">
         <div class="flex flex-col justify-start items-center gap-4 mb-4"
             :class="isCentered ? 'items-center' : 'items-start'">
             <p>thomas.bfrd@gmail.com</p>
@@ -17,7 +16,7 @@ defineProps<{
                 <li v-for="social in SOCIALS" :key="social.platform">
                     <a :href="social.url" target="_blank" class="inline-block">
                         <component :is="social.icon"
-                            class="h-12 w-12 fill-zinc-300 hover:fill-white transition-all duration-300 hover:scale-110" />
+                            class="h-12 w-12 fill-foreground hover:fill-foreground transition-all duration-300 hover:scale-110" />
                     </a>
                 </li>
             </ul>
