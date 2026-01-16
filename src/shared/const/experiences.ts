@@ -2,10 +2,10 @@ import type { Activity } from "../interfaces/activity.interface";
 
 export const EXPERIENCES: Activity[] = [
     {
-        title: "Hubbix - Angular/.NET",
+        title: "Hubbix - Angular / .NET",
         image: "/cegid-logo.png",
         screen: "/hubbix-screen.png",
-        company: "Hubbix",
+        company: "EBP, A Cegid Company",
         period: "Oct 2023 - Oct 2025",
         tools: [
             "Angular",
