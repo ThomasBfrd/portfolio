@@ -14,26 +14,24 @@ defineProps<{
 </script>
 
 <template>
-    <aside class="border-r border-border bg-background p-6 flex flex-col items-center justify-start h-screen md:sticky gap-4
-            sm:flex-col sm:min-h-screen sm:relative sm:h-screen sm:translate-x-0" :class="{
+    <aside class="border-border bg-background p-4 flex flex-col items-center justify-center md:h-screen md:sticky gap-4
+            sm:flex-col sm:min-h-screen sm:relative sm:h-screen sm:translate-x-0 overflow-y-auto" :class="{
                 'fixed z-20 top-0 left-0 h-screen w-[280px] transform transition-transform duration-300': true,
                 '-translate-x-full': !sidebarOpen,
                 'translate-x-0': sidebarOpen
             }">
-        <button class="self-end sm:hidden mt-6 mb-4 p-2 border border-border rounded cursor-pointer"
+        <button class="self-end sm:hidden p-2 border border-border rounded cursor-pointer fixed top-4 right-4"
             @click="setSidebarOpen(false)">
             ✕
         </button>
 
-        <section class="flex flex-col items-center gap-2 mt-4 border-b border-border pb-4 w-full">
+        <section class="flex flex-col items-center gap-2 border-border pb-4">
             <ProfilePicture />
             <span class="text-foreground text-center font-light">@thomasbfrd</span>
         </section>
 
-        <h1 class="text-2xl font-bold text-foreground">Menu</h1>
-
         <div class="w-full">
-            <ul class="flex flex-col gap-4 mt-6">
+            <ul class="flex flex-col gap-4 mb-4">
                 <li v-for="item in MENU_ITEMS" :key="item.label">
                     <RouterLink :to="item.route" @click="setSidebarOpen(false); setRouterPath(item.route)"
                         class="cursor-pointer flex justify-between px-4 items-center p-2 hover:text-secondary-foreground border border-border rounded-[8px] hover:bg-secondary transition-all duration-200 group">
@@ -46,10 +44,7 @@ defineProps<{
                 </li>
             </ul>
         </div>
-        <div class="mt-auto justify-self-end w-full flex flex-col items-center">
-            <h2 class="text-2xl font-bold mb-4">Contact</h2>
-            <About :is-centered="true" class="" />
-        </div>
+
         <div>
             <button @click="setDarkMode()"
                 class="h-12 w-12 rounded-lg p-2 cursor-pointer bg-background hover:bg-background transition-all duration-200">
@@ -62,6 +57,11 @@ defineProps<{
                         fill-rule="evenodd" clip-rule="evenodd"></path>
                 </svg>
             </button>
+        </div>
+
+        <div class="w-full flex flex-col items-center mb-4">
+            <h2 class="text-2xl font-bold mb-4">Contact</h2>
+            <About :is-centered="true" />
         </div>
     </aside>
 </template>
