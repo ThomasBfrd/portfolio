@@ -12,16 +12,8 @@
                     production, aussi bien sur le développement de fonctionnalités que sur l’investigation et la
                     résolution d’incidents via le système de tickets.</p>
 
-                <p>Lors de cette expérience, j’ai été amené à analyser et corriger des anomalies, intervenir sur des
-                    microservices en .NET et des bases de données SQL, et déployer des hotfix ainsi que des scripts SQL
-                    en production afin de résoudre des problématiques applicatives. J’ai également mis en place une
-                    documentation technique structurée contenant des snippets SQL, afin de faciliter et fiabiliser la
-                    création de scripts récurrents. J’accorde par ailleurs une importance particulière à la
-                    compréhension métier ainsi qu'à la communication au sein de l’équipe.</p>
-
                 <p>En parallèle, je développe un projet personnel fullstack en production (React / .NET), me permettant
-                    de consolider mes compétences backend, notamment en conception orientée DDD, et de maintenir une
-                    pratique régulière du développement applicatif.</p>
+                    de consolider mes compétences backend, notamment sur l'architecture en DDD.</p>
                 <p>En dehors du développement, je suis passionné par la musique électronique et le sound-design, et je compose de la musique à mes heures perdues.</p>
             </div>
         </section>

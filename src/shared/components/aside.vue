@@ -14,9 +14,9 @@ defineProps<{
 </script>
 
 <template>
-    <aside class="border-border bg-background p-4 flex flex-col items-center justify-center md:h-screen md:sticky gap-4
-            sm:flex-col sm:min-h-screen sm:relative sm:h-screen sm:translate-x-0 overflow-y-auto" :class="{
-                'fixed z-20 top-0 left-0 h-screen w-[280px] transform transition-transform duration-300': true,
+    <aside class="border-border bg-background p-4 flex flex-col items-center justify-evenly min-h-dvh h-dvh md:sticky
+            sm:flex-col sm:relative sm:translate-x-0 overflow-y-hidden" :class="{
+                'fixed z-20 top-0 left-0 min-h-dvh w-[280px] transform transition-transform duration-300': true,
                 '-translate-x-full': !sidebarOpen,
                 'translate-x-0': sidebarOpen
             }">
@@ -59,7 +59,7 @@ defineProps<{
             </button>
         </div>
 
-        <div class="w-full flex flex-col items-center mb-4">
+        <div class="w-full flex flex-col items-center mb-6">
             <h2 class="text-2xl font-bold mb-4">Contact</h2>
             <About :is-centered="true" />
         </div>

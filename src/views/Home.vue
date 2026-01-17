@@ -22,7 +22,7 @@ import { RECENT_ACTIVITIES } from '@/shared/const/recent-activities';
         <li v-for="skill in PROFILE.skills" :key="skill.name"
           class="text-center p-3 border border-border rounded-full cursor-pointer transition-all duration-300 ease-out relative overflow-hidden hover:font-semibold hover:scale-105 group"
           :class="skill.background">
-          <span class="group-hover:brightness-150">{{ skill.name }}</span>
+          <span class="group-hover:text-primary group-hover:brightness-150 hover:text-white">{{ skill.name }}</span>
         </li>
       </ul>
     </section>
