@@ -42,9 +42,11 @@ onUnmounted(() => {
     <div class="max-w-[1440px] flex flex-col mx-auto text-foreground">
       <div class="sm:hidden flex justify-between items-center border-b border-border">
         <div class="flex items-center gap-4 ml-6 p-6">
-          <div class="h-[60px] w-[60px]">
-            <ProfilePicture class="w-full h-full" />
-          </div>
+          <RouterLink :to="'/'" @click="setRouterPath('/')">
+            <div class="h-[60px] w-[60px]">
+              <ProfilePicture class="w-full h-full" />
+            </div>
+          </RouterLink>
           <div class="flex flex-col items-start">
             <h1 class="text-1xl font-bold text-foreground">{{ PROFILE.name }}</h1>
             <p class="text-xs text-foreground italic">{{ PROFILE.email }}</p>
